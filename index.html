@@ -1,234 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Online Training</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #E0E0E0;
-        }
-        header {
-            background-color: #1E1E1E;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav ul li a {
-            color: #0D6EFD;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #28A745;
-        }
-        .hero {
-            background-image: url('assets/images/hero.jpg');
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            padding: 120px 20px;
-            color: white;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .hero h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-        .hero button {
-            background-color: #28A745;
-            color: white;
-            border: none;
-            padding: 15px 35px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .hero button:hover {
-            background-color: #218838;
-        }
-        .courses {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 40px auto 0;
-        }
-        .course-card {
-            background-color: #1E1E1E;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-            transition: transform 0.3s;
-        }
-        .course-card:hover {
-            transform: translateY(-10px);
-        }
-        .course-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        .course-card h3 {
-            margin: 20px 0 10px;
-            color: #0D6EFD;
-        }
-        .course-card p {
-            padding: 0 20px;
-            min-height: 80px;
-        }
-        .course-card button {
-            background-color: #28A745;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            margin: 20px 0;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .course-card button:hover {
-            background-color: #218838;
-        }
-        .contact {
-            background-color: #1E1E1E;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .contact img {
-            width: 100px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 15px 0;
-            background-color: #2C2C2C;
-            border: none;
-            border-radius: 5px;
-            color: #E0E0E0;
-            font-size: 16px;
-        }
-        .contact input::placeholder, .contact textarea::placeholder {
-            color: #AAAAAA;
-        }
-        .contact button {
-            background-color: #28A745;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .contact button:hover {
-            background-color: #218838;
-        }
-        footer {
-            background-color: #0D0D0D;
-            color: #777;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StringMaster | Learn & Get Placed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="templatemo-606-string-master.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Master Java Programming Online</h1>
-            <p>Expert-led live classes | Hands-on projects | Flexible schedule</p>
-            <button>Enroll Now</button>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">;</div>
+        Semicolan
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+      </ul>
+      <a href="#pricing" class="nav-cta"><span>Start Free Trial</span></a>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- TIP: To enable full-screen hero, uncomment "min-height: 100vh" in the .hero CSS -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>●</span> New: Placement-Driven Java Training Program
         </div>
-    </section>
-
-    <section id="courses" class="courses">
-        <h2>Our Java Courses</h2>
-        <div class="course-grid">
-            <div class="course-card">
-                <img src="assets/images/course1.jpg" alt="Java Basics">
-                <h3>Java Basics</h3>
-                <p>Master fundamentals: variables, loops, OOP concepts, and more.</p>
-                <button>Enroll</button>
-            </div>
-            <div class="course-card">
-                <img src="assets/images/course2.jpg" alt="Advanced Java">
-                <h3>Advanced Java</h3>
-                <p>Explore multithreading, collections, JDBC, and Spring framework.</p>
-                <button>Enroll</button>
-            </div>
-            <div class="course-card">
-                <img src="assets/images/course3.jpg" alt="Java Projects">
-                <h3>Real-World Java Projects</h3>
-                <p>Build full applications with guidance and code reviews.</p>
-                <button>Enroll</button>
-            </div>
+        <h1>Become a <span class="highlight">Job-Ready</span> Java developer</h1>
+        <p class="hero-description">
+          with guaranteed placement support.
+        </p>
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn-primary">
+            Start Learning →
+          </a>
+          <a href="#features" class="btn-secondary">
+            See How It Works
+          </a>
         </div>
-    </section>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">500+</div>
+            <div class="stat-label">Trained Candidates</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">3 Months</div>
+            <div class="stat-label">Structured Program</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">90%+</div>
+            <div class="stat-label">Placement Rate</div>
+          </div>
+        </div>
+      </div>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <img src="assets/images/contact-icon.png" alt="Contact Icon">
-        <form action="#" method="post">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="6" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+      <!-- Interactive Guitar -->
+      <div class="guitar-wrapper">
+        <div class="guitar-card">
+          <div class="guitar-header">
+            <span class="guitar-title">Try it — Click a chord</span>
+            <div class="guitar-controls">
+              <button class="chord-btn" data-chord="C">C</button>
+              <button class="chord-btn" data-chord="G">G</button>
+              <button class="chord-btn" data-chord="Am">Am</button>
+              <button class="chord-btn" data-chord="F">F</button>
+              <button class="chord-btn" data-chord="D">D</button>
+              <button class="chord-btn" data-chord="Em">Em</button>
+            </div>
+          </div>
+          <div class="guitar-neck">
+            <div class="fretboard">
+              <div class="nut"></div>
+              <div class="fretboard-grid" id="fretboard">
+                <div class="string-labels">
+                  <div class="string-label">E</div>
+                  <div class="string-label">B</div>
+                  <div class="string-label">G</div>
+                  <div class="string-label">D</div>
+                  <div class="string-label">A</div>
+                  <div class="string-label">E</div>
+                </div>
+                <!-- Frets generated by JS -->
+              </div>
+            </div>
+          </div>
+          <div class="guitar-footer">
+            <div class="guitar-footer-row">
+              <span class="guitar-hint">Click frets to play notes</span>
+              <div class="footer-controls">
+                <button class="clear-btn" id="clearBtn">Clear</button>
+                <div class="sound-toggle">
+                  <span>Sound</span>
+                  <div class="toggle-switch active" id="soundToggle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="song-player">
+              <button class="play-btn" id="playBtn">▶</button>
+              <div class="song-info">
+                <div class="song-title" id="songTitle">Greensleeves</div>
+                <div class="song-progress">
+                  <div class="song-progress-bar" id="progressBar"></div>
+                </div>
+              </div>
+              <select class="song-select" id="songSelect">
+                <option value="greensleeves">Greensleeves</option>
+                <option value="houseoftherisingsun">House of the Rising Sun</option>
+                <option value="amazinggrace">Amazing Grace</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Java Online Training. All rights reserved.</p>
-    </footer>
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything you need to crack Java developer roles</h2>
+        <p class="section-description">
+          Our program combines deep Java fundamentals, real-world backend development
+          and structured placement preparation to accelerate your career
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11.5 2a8.5 8.5 0 0 1 0 17v3l-3-3-3 3v-3a8.5 8.5 0 0 1 6-16z"/>
+              <circle cx="11.5" cy="10.5" r="3"/>
+              <path d="M11.5 7.5v-2M14.5 10.5h2M11.5 13.5v2M8.5 10.5h-2"/>
+            </svg>
+          </div>
+          <h3>Spring Boot & REST APIs</h3>
+          <p>Learn Spring Boot, REST API design, JPA/Hibernate, exception handling, validation, and security basics.
+             Build scalable backend services the same way they’re built in real companies.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="14" rx="2"/>
+              <circle cx="12" cy="11" r="3"/>
+              <path d="M10.5 9.5l4 3-4 3z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Git & GitHub</h3>
+          <p>Master Git fundamentals, branching strategies, pull requests, code reviews, and release workflows.
+             Work exactly like developers do in professional engineering teams.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 8v4l2 2"/>
+            </svg>
+          </div>
+          <h3>Collaborative Development Skills</h3>
+          <p>Learn how to raise clean pull requests, review code, resolve merge conflicts, and handle parallel development.
+             Understand how multiple developers work on the same codebase without breaking things.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+              <path d="M9 9l12-2"/>
+            </svg>
+          </div>
+          <h3>Project Management Tools</h3>
+          <p>Get hands-on experience with tools like Jira, Trello or similar project management systems.
+            Learn task tracking, sprint planning, bug reporting and agile workflows used in live projects.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+              <path d="M8 22h8"/>
+              <path d="M3 10l1.5 1.5M21 10l-1.5 1.5M3 14l1.5-1.5M21 14l-1.5-1.5"/>
+            </svg>
+          </div>
+          <h3>Industry-Grade Projects</h3>
+          <p>Build end-to-end industry-grade applications with proper architecture, documentation, and deployment.
+             These projects become strong portfolio assets and talking points in interviews.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>AI-Driven Interview Preparation</h3>
+          <p>Practice Java, Spring Boot, and backend interview questions with AI-powered mock interviews.
+             Get instant feedback on answers, coding approach, communication, and areas to improve — tailored to your skill level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">Simple, transparent pricing</h2>
+        <p class="section-description">
+          Choose the learning mode that fits you best online or offline , with structured training and placement support.
+        </p>
+      </div>
+      <!-- <div class="billing-toggle">
+        <button class="billing-option active" data-billing="monthly">Monthly</button>
+        <button class="billing-option" data-billing="quarterly">
+          Quarterly
+          <span class="discount-badge">-15%</span>
+        </button>
+        <button class="billing-option" data-billing="yearly">
+          Yearly
+          <span class="discount-badge">-30%</span>
+        </button>
+      </div> -->
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Starter</div>
+          <div class="pricing-price">
+            <span class="currency"></span>Free
+          </div>
+          <div class="pricing-billed"></div>
+          <div class="pricing-savings"></div>
+          <p class="pricing-description">Entry via Screening Interview Only</p>
+          <ul class="pricing-features">
+            <li>Screening interview (Java basics & DSA)</li>
+            <li>Career roadmap discussion</li>
+            <li>Program orientation session</li>
+            <li>Eligibility for Pro plans</li>
+          </ul>
+          <a  href="https://docs.google.com/forms/d/e/1FAIpQLSfQYKuMxb-DAiuaVwIfjD_ClmpjMGwIlblmoN__s0EMrgMatQ/viewform?usp=sharing&ouid=104288813829367817920"
+             target="_blank" class="pricing-btn">Get Started</a>
+        </div>
+        <div class="pricing-card featured" id="proCard">
+          <div class="pricing-name">Online</div>
+          <div class="pricing-price">
+            <span class="currency">₹</span><span id="proPrice">2000</span><span class="period">/mo</span>
+          </div>
+          <div class="pricing-billed" id="proBilled"></div>
+          <div class="pricing-savings" id="proSavings"></div>
+          <p class="pricing-description">Live online classes with structured curriculum.</p>
+          <ul class="pricing-features">
+            <li>REST APIs & backend development</li>
+            <li>Git, GitHub & PR workflows</li>
+            <li>Industry-grade projects</li>
+            <li>Hands-on with PM Tools</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdI4j3q98MmMHIJ3uM-jbKYmd1nL3n3E4hklsyP2Ah-o5UcXg/viewform?usp=publish-editor" 
+          target="_blank" class="pricing-btn">Get Started</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Offline</div>
+          <div class="pricing-price">
+            <span class="currency">₹</span>5000<span class="period">/mo</span>
+          </div>
+          <!-- <div class="pricing-billed">One-time payment</div> -->
+          <!-- <div class="pricing-savings">Best value</div> -->
+          <p class="pricing-description">Classroom-based training with hands-on mentoring and real-time project collaboration.</p>
+          <ul class="pricing-features">
+            <li>REST APIs & backend development</li>
+            <li>Git, GitHub & PR workflows</li>
+            <li>Industry-grade projects</li>
+            <li>Hands-on with PM Tools</li>
+            <li>AI-driven interview preparation</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLYASwsGicRV_xW8Vl0xM82xhBrsZK6gFshckMiVcDDLR1sw/viewform?usp=publish-editor" 
+          target="_blank" class="pricing-btn">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructors Section -->
+  <!-- <section class="instructors" id="instructors">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Instructors</div>
+        <h2 class="section-title">Learn from the best</h2>
+        <p class="section-description">
+          Our instructors have decades of combined experience and a passion for teaching.
+        </p>
+      </div>
+      <div class="instructors-grid">
+        <div class="instructor-card">
+          <div class="instructor-image">
+            <img src="images/acoustic-specialist.jpg" alt="Marcus Chen">
+          </div>
+          <div class="instructor-name">Marcus Chen</div>
+          <div class="instructor-role">Acoustic Specialist</div>
+          <p class="instructor-bio">15 years teaching, Berklee graduate</p>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-image">
+            <img src="images/fingerstyle-expert.jpg" alt="Sarah Williams">
+          </div>
+          <div class="instructor-name">Sarah Williams</div>
+          <div class="instructor-role">Fingerstyle Expert</div>
+          <p class="instructor-bio">YouTube educator, 2M subscribers</p>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-image">
+            <img src="images/blues-rock-guitar.jpg" alt="James Rodriguez">
+          </div>
+          <div class="instructor-name">James Rodriguez</div>
+          <div class="instructor-role">Blues & Rock</div>
+          <p class="instructor-bio">Session guitarist, 20+ albums</p>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-image">
+            <img src="images/music-theory-instructor.jpg" alt="Emily Park">
+          </div>
+          <div class="instructor-name">Emily Park</div>
+          <div class="instructor-role">Music Theory</div>
+          <p class="instructor-bio">PhD in Music, award-winning educator</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Testimonials Section -->
+<!--   <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What our students say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I've tried several apps, but StringMaster's interactive fretboard finally made chord transitions click for me. Went from zero to playing songs in 3 months!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="images/alex-student.jpg" alt="Alex Thompson">
+            </div>
+            <div>
+              <div class="testimonial-name">Alex Thompson</div>
+              <div class="testimonial-title">Beginner, 4 months</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The AI feedback feature is incredible. It's like having a personal instructor available 24/7. My fingerpicking has improved dramatically."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="images/maria-student.jpg" alt="Maria Garcia">
+            </div>
+            <div>
+              <div class="testimonial-name">Maria Garcia</div>
+              <div class="testimonial-title">Intermediate, 1 year</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Worth every penny. The song library keeps me motivated, and the progress tracking shows exactly how far I've come. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="images/david-student.jpg" alt="David Kim">
+            </div>
+            <div>
+              <div class="testimonial-name">David Kim</div>
+              <div class="testimonial-title">Pro subscriber, 8 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="section-container cta-content">
+      <h2>Ready to start your Java career journey?</h2>
+      <p>Join a placement-focused Java program designed to make you job-ready — with real projects, interview preparation and structured placement support.</p>
+      <a href="#pricing" class="btn-primary">Apply for Screening Interview →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">;</div>
+            Semicolon
+          </a>
+          <p>Building job-ready Java developers through structured training, real-world projects, and outcome-driven placement support.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+<!--             <li><a href="#">Song Library</a></li>
+            <li><a href="#">Mobile App</a></li> -->
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+      <!--       <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li> -->
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <!-- <li><a href="#">Help Center</a></li> -->
+            <!-- <li><a href="#">Community</a></li> -->
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Semicolan. All rights reserved.</span>
+        <!-- <span>Developed by <a href="https://www.templatemo.com" target="_blank" rel="nofollow noopener">TemplateMo</a></span> -->
+      </div>
+    </div>
+  </footer>
+
+<script src="templatemo-606-string-scripts.js"></script>
 </body>
 </html>
